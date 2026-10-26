@@ -1,0 +1,8 @@
+/storage/database.sqlite
+/storage/database.sqlite-shm
+/storage/database.sqlite-wal
+/.idea/
+/.vscode/
+.DS_Store
+/storage/logs/
+/storage/*.bak
