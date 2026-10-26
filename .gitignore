@@ -6,3 +6,6 @@
 .DS_Store
 /storage/logs/
 /storage/*.bak
+/storage/pos.sqlite
+/storage/pos.sqlite-shm
+/storage/pos.sqlite-wal
