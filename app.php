@@ -59,7 +59,7 @@ function api():never{
  json(['data'=>['id'=>$id,'total'=>$total,'change'=>$m==='cash'?$received-$total:0]],201);
  }
  if($action==='expense-create'){
- $d=req();$title=trim((string)($d['description']??''));if($title===''||mb_strlen($title)>150)throw new InvalidArgumentException('Keterangan pengeluaran tidak valid');
+ $d=req();$title=trim((string)($d['description']??''));if($title===''||strlen($title)>150)throw new InvalidArgumentException('Keterangan pengeluaran tidak valid');
  $stmt=$db->prepare('INSERT INTO expenses(created_at,description,amount,method) VALUES(?,?,?,?)');$stmt->execute([date('Y-m-d H:i:s'),$title,amount($d['amount']??null),method($d['method']??null)]);json(['ok'=>true],201);
  }
  if($action==='sale-void'){
