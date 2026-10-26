@@ -1,0 +1,7 @@
+Options -Indexes
+<Files "app.php">
+Require all denied
+</Files>
+<Files "README.md">
+Require all denied
+</Files>
